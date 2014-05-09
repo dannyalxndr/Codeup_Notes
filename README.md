@@ -17,3 +17,12 @@ stop that, markdown
 * second item
   * sub item a
   * sub item b
+
+```
+echo "hello world";
+if (condition) {
+	// do stuff
+}
+```
+
+Finally, this is a last paragraph with **bold** text and *italics* and `code`.

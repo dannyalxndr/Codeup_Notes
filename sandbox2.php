@@ -3,17 +3,17 @@
 $beautiful = "The weather is beautiful!";
 $bad = "The weather is awful.";
 $windy = "It's windy outside.";
-$x = "windy";
+$x = 3;
 
-if ($x == "good")
+if ($x == 1)
 {
 	echo "$beautiful" . PHP_EOL;
 }
-elseif ($x == "bad") 
+elseif ($x == 2) 
 {
 	echo "$bad" . PHP_EOL;
 }
-elseif ($x == "windy") 
+elseif ($x == 3) 
 {
 	echo "$windy" . PHP_EOL;
 }

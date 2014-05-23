@@ -1,47 +1,45 @@
 <?php
 
-$person1 = 'Dan';
-$person2 = 'Alex';
-
-$deck = 
-[
-1 => ['1'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-2 => ['2'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-3 => ['3'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-4 => ['4'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-5 => ['5'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-6 => ['6'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-7 => ['7'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-8 => ['8'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-9 => ['9'      =>['diamonds', 'hearts', 'spades', 'clubs']],
-10 =>['10'     =>['diamonds', 'hearts', 'spades', 'clubs']],
-11 =>['Jack'   =>['diamonds', 'hearts', 'spades', 'clubs']],
-12 =>['Queen'  =>['diamonds', 'hearts', 'spades', 'clubs']],
-13 =>['King'   =>['diamonds', 'hearts', 'spades', 'clubs']],
-14 =>['Ace'    =>['diamonds', 'hearts', 'spades', 'clubs']]
-];
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//                    ** FUNCTIONS BELOW **
 
 
-foreach($deck as $value => $cards)
+function deal_cards($number_of_cards, $number_of_players)
 {
-	foreach($cards as $card => $suits)
+	$players = 0;
+	if($players > 2)
 	{
-		foreach($suits as $suit)
-		{
-			echo $card . " of " . $suit . PHP_EOL;
-		}
+
 	}
 }
+           
+// array of players
+$players = ['John', 'Jane', 'Jack', 'Justin'];
 
+// getting the count of players
+$number_of_players = count($players); 
 
+// card values in one array
+$cards = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace');
 
+// suits in another array
+$suits = array('Clubs', 'Diamonds', 'Hearts', 'Spades');
 
+// combining both $cards and $suits arrays to create the deck
+$deck = array();
 
+foreach ($suits as $suit) 
+{
+    foreach ($cards as $card) 
+    {
+        $deck[] = array ("card"=>$card, "suit"=>$suit);
+    }
+}
 
+shuffle($deck);
 
-
-
-
+print_r($deck) . PHP_EOL;
 
 
 
